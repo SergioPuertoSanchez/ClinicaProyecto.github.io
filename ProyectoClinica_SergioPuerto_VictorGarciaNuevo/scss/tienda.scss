@@ -1,0 +1,297 @@
+@import "variables";
+@import "body";
+
+/*contenedor principal*/
+#mainContent{
+	@include contenidoPrincipal;
+}
+
+/*Estilo del contenido*/
+.contenido{
+	display: flex;
+    flex-direction:column;
+    align-items: center;        
+}
+
+/*Para la cesta y el buscador*/
+.buscador-cesta{
+	margin-top: 20px;
+	
+}
+
+.buscador-cesta .row{
+	display: flex;
+	justify-content: center;	
+}
+
+.col-xl-8{
+	display: flex;   
+	justify-content: center;	
+		
+}
+
+
+.buscador{
+	display: flex;
+    align-self: center;
+    justify-content: center;
+	font-size: $titleBody-size;	
+}
+
+
+.btnCesta button{
+	background: $lightBlue;
+	border: $border-2px;
+}
+
+.btnCesta button a{
+	color: $white;
+	text-decoration:none;
+	font-size: $titleNav-size;
+}
+
+.productos-categorias{
+	margin-top: 30px;
+	background: coral;
+}
+
+
+/**/
+.categorias .row .col-md-4{
+	@include columnasServicios;
+}
+
+/*Estilo del contenido*/
+.contTienda{
+	@include contenidosVarios;
+}
+
+/*Estilo de la columnas*/
+.row{
+	@include columnas;
+}
+
+.col-md-4 img{
+    width: 150px;
+    height: 150px;
+}
+
+.col-md-4 h4{
+    margin-top:20px;
+}
+
+/*Los desplegables de las categorias de la tienda*/
+.card{
+    @include cardServicios;
+}
+
+.card-header{   
+    @include cardHeader;
+}
+
+.card-body{
+    @include cardBody;
+}
+
+
+/*Estilos para las columnas de los productos*/
+.productosTienda{
+	margin-top: 50px;
+	margin-bottom: 50px;
+}
+.productosTienda .row .col-lg-4{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin-top: 30px;
+	color: $black;
+	
+}
+
+.col-lg-4 h5{
+    font-size: $veterinariosNombre-size;
+}
+
+#imgProducto{
+	@include imgSeleccion;
+	width: 250px;
+	height: 350px;
+	margin-bottom: 20px;
+	border: $border-2px;	
+}
+
+#imgProducto:hover {
+	@include imgSeleccionhover;
+}
+
+#imgCategoria{
+	@include imgSeleccion;
+}
+
+#imgCategoria:hover {
+	@include imgSeleccionhover;
+}
+
+/*Estilo del carrusel*/
+#carousel1{
+	@include carrusel;
+}
+
+/* ESTILOS TIENDA PRODUCTO*/
+#colImagen{	
+	display: flex;
+	justify-content: center;
+}
+
+.textoProducto{
+	text-align: justify;
+}
+
+.foto-producto{
+	width: 450px;
+    height: 600px;
+    border: $border-2px;  
+}
+
+.btnAnadir{
+	display: flex;
+	justify-content: center;
+}
+
+.btnAnadir button{
+	background: $lightBlue;
+	border: $border-2px;
+}
+
+.btnAnadir button a{
+	color: $white;
+	text-decoration:none;
+	font-size: $titleNav-size;
+}
+
+
+/*ESTILOS TIENDA PAGAR*/
+.foto-producto-pagar{
+	width: 100px;
+    height: 150px;  
+}
+
+.btnEliminar{
+	display: flex;
+	justify-content: center;
+}
+
+.btnEliminar button{
+	background: $white;	
+}
+
+.tramitar-pago{
+	display: flex;
+    flex-direction: column;
+    width: 380px;
+    
+    border: $border-3px;
+}
+
+
+.resumenTitulo{
+	display: flex;
+    align-self: flex-start;
+    justify-content: center;
+    width: 180px;
+    color: $white;
+    font-size: $titleNav-size;
+    background-color: $lightBlue;
+    border: $border-3px;
+    border-top: none;
+    border-left: none;
+}
+
+.resumenContenido{
+	display: flex;
+    align-items: center;
+    flex-direction: column;
+    font-size: $horariosContenido-size;
+}
+
+#colProductos{	
+	font-size: $titleBody-size;
+	padding-left: 100px;	
+}
+
+#colPagar{
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	padding-left: 100px;	
+}
+
+.btnBorrarTodo{
+	display: flex;
+	justify-content: center;
+	
+}
+
+.btnBorrarTodo button{
+	background: $lightBlue;	
+	border: $border-2px;
+	font-size: $titleNav-size;
+}
+
+.btnPagar{
+	display: flex;
+	justify-content: center;
+}
+
+.btnPagar button{
+	background: $lightBlue;
+	border: $border-2px;
+}
+
+.btnPagar button a{
+	color: $white;
+	text-decoration:none;
+	font-size: $titleNav-size;
+}
+/*Media query*/
+@media (max-width: 1199px) {
+	.col-xl-10, .col-xl-2{
+    	display: flex;
+		justify-content: center;
+  	}
+
+  	.contTienda{
+		margin-right:5%; 
+		margin-left:5%;
+	}
+	
+	.buscador-cesta .row .col-xl-4{
+		display: flex;
+		justify-content: center;
+	}
+
+	.btnCesta{
+    	margin-top: 50px;
+  	}
+	  
+}
+
+@media (max-width: 991px) {
+  .col-lg-6{		
+    padding-top: 50px;
+  }
+    
+}
+
+@media (max-width: 1199px) {
+	#colPagar{
+		margin-top: 50px;
+    	display: flex;
+		justify-content: center;
+		padding-left: 0px;		
+  	}
+
+	  #colProductos{	
+		padding-left: 0px;
+  	}
+}
